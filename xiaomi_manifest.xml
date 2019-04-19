@@ -5,10 +5,10 @@
            fetch="https://github.com/LineageOS/"/>
 
    <remote  name="sdm660"
-           fetch="ssh://git@github.com/xiaomi-sdm660/"/>
+           fetch="https://github.com/xiaomi-sdm660/"/>
 
   <remote  name="rcstar6696"
-           fetch="ssh://git@github.com/rcstar6696/"/>
+           fetch="https://github.com/rcstar6696/"/>
 
 <!-- BUILD MANIFEST -->
 
