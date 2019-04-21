@@ -33,7 +33,7 @@
 <!-- XIAOMI MANIFEST -->
 
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="QuixoticFP" revision="kernel.lnx.4.4.r34-rel"/>
+	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="kernel.lnx.4.4.r34-rel"/>
 
   <!-- wayne -->
 	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="QuixoticFP" revision="havoc"/>
