@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Please do not manually edit this file-->
 <manifest>
-   <remote  name="lineageos"
-           fetch="https://github.com/LineageOS/"/>
-
    <remote  name="QuixoticFP"
            fetch="https://github.com/QuixoticFP/"/>
-
-  <remote  name="rcstar6696"
-           fetch="https://github.com/rcstar6696/"/>
-
-<remote  name="sdm660"
-           fetch="https://github.com/xiaomi-sdm660/"/>
 
 <!-- BUILD MANIFEST -->
 
 	<project name="android_build_manifest" path="repo/local_manifest" remote="QuixoticFP" revision="havoc" >
 	<linkfile src="xiaomi_manifest.xml" dest="repo/local_manifest/local_manifest.xml"/>
 	</project>
-
-	<project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="havoc" >
-	<linkfile src="buildxiaomi.sh" dest="buildxiaomi.sh" />
-	<linkfile src="buildxiaomi_kernel.sh" dest="buildxiaomi_kernel.sh" />
-	<linkfile src="sync.sh" dest="sync.sh" />
-	<linkfile src="audit_alow.sh" dest="audit_alow.sh" />
-	<linkfile src="buildmodule.sh" dest="buildmodule.sh" />
-	</project>
-
 <!-- BUILD MANIFEST -->
 
 
 <!-- XIAOMI MANIFEST -->
 
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="kernel.lnx.4.4.r34-rel"/>
+	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="QuixoticFP" revision="kernel.lnx.4.4.r34-rel"/>
 
   <!-- wayne -->
 	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="QuixoticFP" revision="fenix"/>
