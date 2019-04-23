@@ -6,7 +6,7 @@
 
 <!-- BUILD MANIFEST -->
 
-	<project name="build_manifest" path="repo/local_manifest" remote="QuixoticFP" revision="havoc" >
+	<project name="build_manifest" path="repo/local_manifest" remote="QuixoticFP" revision="pie" >
 	<linkfile src="xiaomi_manifest.xml" dest="repo/local_manifest/local_manifest.xml"/>
 	</project>
 <!-- BUILD MANIFEST -->
