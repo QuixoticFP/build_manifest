@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Please do not manually edit this file-->
 <manifest>
-   <remote  name="QuixoticFP"
-           fetch="https://github.com/QuixoticFP/"/>
+   <remote  name="lineageos"
+           fetch="https://github.com/LineageOS/"/>
+
+   <remote  name="sdm660"
+           fetch="https://github.com/xiaomi-sdm660/"/
+
+  <remote  name="quixoticfp"
+           fetch="https://github.com/rcstar6696/"/>
 
 <!-- BUILD MANIFEST -->
 
-	<project name="build_manifest" path="repo/local_manifest" remote="QuixoticFP" revision="pie" >
+	<project name="android_build_manifest" path="repo/local_manifest" remote="quixoticfp" revision="fenix" >
 	<linkfile src="xiaomi_manifest.xml" dest="repo/local_manifest/local_manifest.xml"/>
 	</project>
+
+	<project name="android_build_scripts" path="build/scripts" remote="sdm660" revision="havoc" >
+	<linkfile src="buildxiaomi.sh" dest="buildxiaomi.sh" />
+	<linkfile src="buildxiaomi_kernel.sh" dest="buildxiaomi_kernel.sh" />
+	<linkfile src="sync.sh" dest="sync.sh" />
+	<linkfile src="audit_alow.sh" dest="audit_alow.sh" />
+	<linkfile src="buildmodule.sh" dest="buildmodule.sh" />
+	</project>
+
 <!-- BUILD MANIFEST -->
 
 
 <!-- XIAOMI MANIFEST -->
 
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="QuixoticFP" revision="kernel.lnx.4.4.r34-rel"/>
+	<project name="android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="sdm660" revision="kernel.lnx.4.4.r34-rel"/>
+  
+  <!-- wayne-->
+	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="quixoticfp" revision="fenix"/>
 
-  <!-- wayne -->
-	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="QuixoticFP" revision="fenix"/>
+  <!-- jasmine-->
+	<project name="android_device_xiaomi_jasmine_sprout" path="device/xiaomi/jasmine_sprout" remote="sdm660" revision="havoc"/>
 
   <!-- Common-->
-	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="QuixoticFP" revision="havoc"/>
+	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="sdm660" revision="havoc"/>
 
   <!-- vendor -->
-	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="QuixoticFP" revision="master2" />
+	<project name="android_vendor_xiaomi_jasmine_sprout" path="vendor/xiaomi/jasmine_sprout" remote="sdm660" revision="master" />
+	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="sdm660" revision="master" />
 
-  <project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/MiuiCamera" remote="QuixoticFP" revision="master" />
-  </manifest>
+  <project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/MiuiCamera" remote="sdm660" revision="master" />
+  <project name="android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="lineageos" revision="lineage-16.0" />
+</manifest>
