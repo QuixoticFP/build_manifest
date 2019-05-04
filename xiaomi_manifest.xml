@@ -12,7 +12,7 @@
 
 <!-- BUILD MANIFEST -->
 
-	<project name="android_build_manifest" path="repo/local_manifest" remote="quixoticfp" revision="fenix" >
+	<project name="build_manifest" path="repo/local_manifest" remote="quixoticfp" revision="fenix" >
 	<linkfile src="xiaomi_manifest.xml" dest="repo/local_manifest/local_manifest.xml"/>
 	</project>
 
