@@ -4,8 +4,9 @@
    <remote  name="QuixoticFP"
            fetch="https://github.com/QuixoticFP/"/>
 
-<remote  name="xiaomi-sdm660"
-           fetch="https://github.com/xiaomi-sdm660/"/>
+<remote name ="sdm710"
+     fetch="https://github.com/mzakwan/"/>
+
 
 
 <!-- BUILD MANIFEST -->
@@ -19,20 +20,13 @@
 <!-- XIAOMI MANIFEST -->
 
   <!-- kernel -->
-	<project name="android_kernel_xiaomi_sdm660" path="xiaomi-sdm660" revision="kernel.lnx.4.4.r34-rel"/>
+	<project name="android_kernel_xiaomi_sdm710" path="kernel/xiaomi/sdm710" remote="sdm710" revision="havoc-p"/>
 
-  <!-- wayne -->
-	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="QuixoticFP" revision="fenix"/>
-
-<!-- jasmine -->
-
-        <project name="android_device_xiaomi_jasmine_sprout" path="device/xiaomi/jasmine_sprout" remote="QuixoticFP" revision="fenix"/>
+  <!-- sirius -->
+	<project name="device_xiaomi_sirius" path="device/xiaomi/sirius" remote="sdm710" revision="communismos"/>
 
   <!-- Common-->
-	<project name="android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="xiaomi-sdm660" revision="havoc"/>
+	<project name="device_xiaomi_sdm710-common" path="device/xiaomi/sdm710-common" remote="sdm710" revision="havoc-p"/>
 
   <!-- vendor -->
-	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="xiaomi-sdm660" revision="master2" />
-
-  <project name="android_vendor_xiaomi_Miuicamera" path="vendor/xiaomi/MiuiCamera" remote="xiaomi-sdm660" revision="master" />
-  </manifest>
+	<project name="android_vendor_xiaomi_sdm710" path="vendor/xiaomi/ remote="sdm710" revision="havoc-p" />
